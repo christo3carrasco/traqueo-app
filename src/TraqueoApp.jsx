@@ -5,7 +5,7 @@ export const TraqueoApp = () => {
     <>
       <Header />
       <AddCoords />
-      <MapFrame latitude={-8.12689} longitude={-79.0287} />
+      <MapFrame latitude={-8.12689} longitude={-79.02871} />
       <Footer />
     </>
   );
