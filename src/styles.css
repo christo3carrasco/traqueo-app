@@ -9,26 +9,32 @@ body {
 }
 
 .logo {
+  height: 12vh;
   margin-left: auto;
   margin-right: auto;
   object-fit: cover;
   width: 50vh;
-  height: 12vh;
 }
 
-.icono {
+.icon {
+  display: none;
+  height: 12vh;
   margin: auto;
   object-fit: cover;
   width: 18vh;
-  height: 12vh;
-  display: none;
+}
+
+.footerText {
+  color: #fff;
+  margin: 25px auto;
+  text-align: center;
 }
 
 @media (max-width: 540px) {
   .logo {
     display: none;
   }
-  .icono {
+  .icon {
     display: block;
   }
 }
@@ -37,7 +43,7 @@ body {
   .logo {
     margin: 32px auto 28px auto;
   }
-  .icono {
+  .icon {
     display: none;
   }
 }
