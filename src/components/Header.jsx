@@ -1,16 +1,14 @@
-import {Container, Row } from "react-bootstrap";
-import logo from '../../public/logo.png'
-import icono from '../../public/icono.png'
+import { Container, Row } from "react-bootstrap";
+import traqueoLogo from "/logo.png";
+import traqueoIcon from "/icono.png";
 
 export const Header = () => {
   return (
-    <>
-      <Container>
-        <Row>
-            <img src={logo} alt='Traqueo' className='logo'/>
-            <img src={icono} alt='Traqueo' className='icono'/>
-        </Row>
-      </Container>
-    </>
+    <Container>
+      <Row>
+        <img className="logo" src={traqueoLogo} alt="Traqueo" />
+        <img className="icon" src={traqueoIcon} alt="Traqueo" />
+      </Row>
+    </Container>
   );
 };

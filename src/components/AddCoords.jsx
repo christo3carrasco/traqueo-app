@@ -1,33 +1,50 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import { Col, Container, Row } from "react-bootstrap";
+import {
+  Button,
+  Col,
+  Container,
+  FloatingLabel,
+  Form,
+  Row,
+} from "react-bootstrap";
 
 export const AddCoords = () => {
-  return (
-    <>
-      <Container>
-            <Form>
-              <Row>
-                <Col >
-                  <Form.Group className="inputCoords " >
-                    <Form.Control type="number" step="0.0001" placeholder="Latitud"/>
-                  </Form.Group>
-                </Col>
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
 
-                <Col >
-                  <Form.Group className="inputCoords">
-                    <Form.Control type="number" step="0.0001" placeholder="Longitud" />
-                  </Form.Group>
-                </Col>
-              </Row> 
-              
-              <Row style={{margin:"20px auto 28px auto"}}>
-                <Button className='buttonCoords'  style={{ fontWeight:"600"}} variant="secondary" type="submit">
-                  Submit
-                </Button>
-              </Row>
-            </Form>
-      </Container>
-    </>
+  return (
+    <Container>
+      <Form onSubmit={handleSubmit}>
+        <Row>
+          <Col>
+            <Form.Group className="inputCoords">
+              <FloatingLabel controlId="floatingLatitude" label="Latitude">
+                <Form.Control
+                  type="number"
+                  step="0.000001"
+                  placeholder="Latitude"
+                />
+              </FloatingLabel>
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Group className="inputCoords">
+              <FloatingLabel controlId="floatingLongitude" label="Longitude">
+                <Form.Control
+                  type="number"
+                  step="0.000001"
+                  placeholder="Longitude"
+                />
+              </FloatingLabel>
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row style={{ margin: "25px auto" }}>
+          <Button className="buttonCoords" variant="secondary" type="submit">
+            Submit
+          </Button>
+        </Row>
+      </Form>
+    </Container>
   );
 };
